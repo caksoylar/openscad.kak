@@ -16,6 +16,10 @@ hook global WinSetOption filetype=openscad %{
 
     hook window InsertChar \n -group openscad-indent openscad-indent-on-new-line
     hook -once -always window WinSetOption filetype=.* %{ remove-hooks window openscad-.+ }
+
+    set-option window comment_block_begin '/*'
+    set-option window comment_block_end '*/'
+    set-option window comment_line '//'
 }
 
 hook -group openscad-highlight global WinSetOption filetype=openscad %{
