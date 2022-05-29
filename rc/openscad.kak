@@ -36,7 +36,8 @@ add-highlighter shared/openscad regions
 add-highlighter shared/openscad/code default-region group
 add-highlighter shared/openscad/double_string region '"'   (?<!\\)(\\\\)*"  fill string
 add-highlighter shared/openscad/single_string region "'"   (?<!\\)(\\\\)*'  fill string
-add-highlighter shared/openscad/comment       region '//'   '$'              fill comment
+add-highlighter shared/openscad/comment       region '//'  '$'              fill comment
+add-highlighter shared/openscad/comment-block region '/\*' '\*/'            fill comment
 
 # Integer formats
 add-highlighter shared/openscad/code/ regex '(?i)\b0b[01]+l?\b' 0:value
