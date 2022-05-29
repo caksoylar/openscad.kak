@@ -55,7 +55,7 @@ evaluate-commands %sh{
     echo echo -debug $values
     meta="include use"
 
-    keywords="module function for each"
+    keywords="module function for each if else"
 
     # Taken from the OpenSCAD cheat sheet
     modules="circle square polygon text import projection
@@ -83,7 +83,7 @@ evaluate-commands %sh{
     "
 }
 
-add-highlighter shared/openscad/code/ regex (?<=[\w\s\d'"_])(<=|<<|>>|>=|<>|<|>|!=|==|\||\^|&|\+|-|\*\*|\*|//|/|%|~) 0:operator
+add-highlighter shared/openscad/code/ regex (?<=[\w\s\d'"_])(<=|<<|>>|>=|<>|<|>|!=|==|\||\^|&|&&|\||\|\||\+|-|\*\*|\*|//|/|%|~) 0:operator
 add-highlighter shared/openscad/code/ regex (?<=[\w\s\d'"_])((?<![=<>!])=(?![=])|[+*-]=) 0:builtin
 # Add highlighters for all the $X special variables manually since the join function creates invalid regexes for them.
 # We would need to somehow escape $ characters in the join function to get rid of this 
